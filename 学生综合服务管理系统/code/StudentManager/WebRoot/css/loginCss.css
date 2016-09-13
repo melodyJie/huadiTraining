@@ -1,0 +1,113 @@
+.error {
+    color: red;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-image: url('../images/linearSky.jpg');
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    overflow-x:hidden;
+}
+
+.loginPanel {
+    width: 380px;
+    height: auto;
+    left: 500px;
+    top: 200px;
+    position: absolute;
+    border: 1px solid #ccc;
+    background: #f6f6f6;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 0 8px #000;
+    -webkit-box-shadow: 0 0 8px #000;
+    box-shadow: 0 0 8px #000;
+}
+#yunduo{
+    position:absolute;
+    left:0;
+    top:100px;
+    animation: yun-move 10s linear infinite;
+}
+#taiyang {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: -60px;
+    top: -65px;
+    z-index: 10;
+    filter:alpha(opacity:50);
+    opacity:0.5;
+}
+
+.login_logo_web {
+    background: url('../images/login_logo.jpg') no-repeat ;
+    margin: 5px auto;
+    width: 44px;
+    height: 44px;
+    cursor: move;
+}
+
+#loginForm {
+    width: 340px;
+    height: auto;
+    margin: 0 auto;
+    color: #868686;
+}
+
+#loginForm p {
+    position: relative;
+    margin: 20px 20px;
+}
+
+#loginForm p span {
+    position: absolute;
+    left: 280px;
+    top: 1px;
+    width: 200px;
+    border: 1px #ccc solid;
+    font-size: 16px;
+    padding: 2px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -border-radius: 10px;
+}
+
+#loginForm p label {
+    width: 60px;
+    display: inline-block;
+    text-align: center;
+}
+
+#loginForm p input,
+select {
+    border: 1px #ccc solid;
+    color: #868686;
+    font-size: 16px;
+    padding: 2px;
+    border-radius: 5px;
+    outline: none;
+}
+
+#submit {
+    background: url("../images/login_btn.png") no-repeat -111px 0;
+    width: 111px;
+    height: 36px;
+    border: 0;
+    text-align: center;
+    line-height: 20px;
+    color: #0C4E7C;
+    cursor: pointer;
+    margin-left: 200px;
+    margin-bottom: 15px;
+}

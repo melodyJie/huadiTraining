@@ -1,0 +1,24 @@
+<div class="titleArea"><span class="titleP">选择结果</span></div>
+<!-- <div ng-repeat="room in rooms" style="font-family:monospace">
+    <h1>
+    		<div>{{room.building.section.campus}}</div>
+    		<div>{{room.building.buildingName}}</div>
+    		<div>{{room.roomNumber}}</div>
+    	</h1>
+</div> -->
+<table class="table table-hover table-striped table-bordered">
+    <tbody ng-repeat="room in rooms">
+        <tr>
+            <td>地区</td>
+            <td>{{room.building.section.campus}}</td>
+        </tr>
+        <tr>
+            <td>楼栋</td>
+            <td>{{room.building.buildingName}}</td>
+        </tr>
+        <tr>
+            <td>宿舍号</td>
+            <td>{{room.roomNumber}}</td>
+        </tr>
+    </tbody>
+</table>

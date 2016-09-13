@@ -1,0 +1,15 @@
+<div class="titleArea"><span class="titleP">各项费用</span></div>
+<table class="table table-hover table-striped table-bordered">
+    <thead>
+        <tr>
+            <td>费用类型</td>
+            <td>金额</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="topic in expenses">
+            <td>{{ topic.fee.feeName }}</td>
+            <td>${{ topic.value }}</td>
+        </tr>
+    </tbody>
+</table>

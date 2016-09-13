@@ -1,0 +1,29 @@
+
+/*  */
+
+.costCosts{
+	width: 100%;
+}
+
+
+/* pubCost */
+.addStandardDiv{
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%,-50%);
+	background-color: white;
+	padding: 30px 50px;
+    border: 2px solid grey;
+}
+.formUl.clearMargin{
+	margin: 0;
+}
+.addStandardDiv .hideLi{
+	display: none;
+}
+.wid120{
+	min-width: 100px;
+	width: 120px;
+}

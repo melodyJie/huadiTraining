@@ -1,0 +1,15 @@
+<div class="titleArea">
+    <span class="titleP">剩余可选宿舍</span>
+    <div class="btnBox">
+        <input class="formBtn" type="submit" value="确定">
+    </div>
+</div>
+<div class="roomSelect clearfloat">
+    <div class="roomBox" ng-repeat="room in rooms">
+    	<p>
+    		<span class="area">{{room.building.section.campus}}</span>
+    		<span class="floor">{{room.building.buildingName}}</span>
+    		<span class="room" data-id={{room.roomId}}>{{room.roomNumber}}</span>
+    	</p>
+    </div>
+</div>

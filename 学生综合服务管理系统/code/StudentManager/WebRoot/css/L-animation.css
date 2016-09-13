@@ -1,0 +1,121 @@
+@-webkit-keyframes L-move{
+	0%{
+		transform:translateX(-1100px);
+	},
+	100%{
+		transform:translateX(0);
+	}
+}
+@-moz-keyframes L-move{
+	0%{
+		transform:translateX(-1100px);
+	},
+	100%{
+		transform:translateX(0);
+	}
+}
+@-ms-keyframes L-move{
+	0%{
+		transform:translateX(-1100px);
+	},
+	100%{
+		transform:translateX(0);
+	}
+}
+@-o-keyframes L-move{
+	0%{
+		transform:translateX(-1100px);
+	},
+	100%{
+		transform:translateX(0);
+	}
+}
+@keyframes L-move{
+	0%{
+		transform:translateX(-1100px);
+	},
+	100%{
+		transform:translateX(0);
+	}
+}
+
+/*ball css*/
+.ballBox{
+	width: 1000px;
+	position: relative;
+	margin: 0 auto;
+}
+#list-product{
+	margin:200px 0 0 0;
+}
+#list-product li{
+	position:absolute;
+}
+.L{
+	position:relative;
+	width:173px;
+	height:173px;
+	background-image:url('../images/ball.png');
+	background-repeat: no-repeat;
+    background-size: auto 173px;
+}#list-product>li:hover{
+	transition: all .2s ease-in-out;
+	transform: scale(1.2,1.2);
+}
+.L>p{
+	position: absolute;
+	top: 45%;
+	width: 100%;
+	text-align: center;
+
+	font-family: "宋体";
+	font-size: 20px;
+	color: #212121;
+
+}
+.L>p:hover{
+	font-weight: bold;
+	color: #000000;
+}
+
+
+#li-0{
+	left:0;
+}
+#li-1{
+	left:200px;
+}
+#li-2{
+	left:400px;
+}
+#li-3{
+	left:600px;
+}
+#li-4{
+	left:800px;
+}
+#L-0{
+	background-position: -348px -0px;
+}
+#L-1{
+	background-position: 0px 0px;
+}
+#L-2{
+	background-position: -174px -0px;
+}
+#L-3{
+    background-position: -696px -0px;
+}
+#L-4{
+	visibility:hidden;
+	background-position: -522px -0px;
+}
+.L-shadow{
+	position:absolute;
+	bottom:-20px;
+	left:0px;
+	width: 173px;
+    height: 24px;
+    background-image:url('../images/ball.png');
+    background-position: -870px -128px;
+}

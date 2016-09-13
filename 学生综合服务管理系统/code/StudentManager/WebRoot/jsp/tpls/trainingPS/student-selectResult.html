@@ -1,0 +1,27 @@
+<div class="marginBox30">
+    <table class="table table-hover table-striped table-bordered">
+        <div class="titleArea">
+            <span class="titleP">选课结果</span>
+        </div>
+        <thead>
+            <tr>
+                <td>课程id</td>
+				<td>课程名</td>
+				<td>课程类型</td>
+				<td>学分</td>
+				<td>教师</td>
+            </tr>
+        </thead>
+        <tbody>
+            <form>
+                <tr ng-repeat="course in courses">
+                    <td>{{ course.teach.course.courseId }}</td>
+                    <td>{{ course.teach.course.courseName }}</td>
+                    <td>{{ course.teach.course.courseType }}</td>
+                    <td>{{ course.teach.course.credit }}</td>
+                    <td>{{ course.teach.teacher.teacherName }}</td>
+                </tr>
+            </form>
+        </tbody>
+    </table>
+</div>

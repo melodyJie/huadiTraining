@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd" xmlns:tx="http://www.springframework.org/schema/tx">
+
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver"></property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/studentmanage?characterEncoding=utf8">
+		</property>
+		<property name="username" value="root"></property>
+		<property name="password" value="123456"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<!-- <prop key="hibernate.show_sql">true</prop> -->
+			</props>
+		</property>
+		<property name="annotatedClasses">
+			<list>
+				<value>com.xidian.entity.Achievement</value>
+				<value>com.xidian.entity.Application</value>
+				<value>com.xidian.entity.Building</value>
+				<value>com.xidian.entity.Choosing</value>
+				<value>com.xidian.entity.College</value>
+				<value>com.xidian.entity.Course</value>
+				<value>com.xidian.entity.Fee</value>
+				<value>com.xidian.entity.Feetype</value>
+				<value>com.xidian.entity.Maintenance</value>
+				<value>com.xidian.entity.Manager</value>
+				<value>com.xidian.entity.Notice</value>
+				<value>com.xidian.entity.Pay</value>
+				<value>com.xidian.entity.Register</value>
+				<value>com.xidian.entity.Room</value>
+				<value>com.xidian.entity.Roomscore</value>
+				<value>com.xidian.entity.Section</value>
+				<value>com.xidian.entity.Specialty</value>
+				<value>com.xidian.entity.Specialtycourse</value>
+				<value>com.xidian.entity.Student</value>
+				<value>com.xidian.entity.Studentclass</value>
+				<value>com.xidian.entity.Teach</value>
+				<value>com.xidian.entity.Teacher</value>
+			</list>
+		</property></bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	<bean id="BuildingDAO" class="com.xidian.dao.impl.BuildingDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="FeeDAO" class="com.xidian.dao.impl.FeeDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="FeetypeDAO" class="com.xidian.dao.impl.FeetypeDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="PayDAO" class="com.xidian.dao.impl.PayDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ChoosingDAO" class="com.xidian.dao.impl.ChoosingDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="NoticeDAO" class="com.xidian.dao.impl.NoticeDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="StudentclassDAO"
+		class="com.xidian.dao.impl.StudentclassDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="RoomscoreDAO" class="com.xidian.dao.impl.RoomscoreDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="SectionDAO" class="com.xidian.dao.impl.SectionDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ManagerDAO" class="com.xidian.dao.impl.ManagerDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ApplicationDAO"
+		class="com.xidian.dao.impl.ApplicationDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="TeachDAO" class="com.xidian.dao.impl.TeachDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="RegisterDAO" class="com.xidian.dao.impl.RegisterDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="RoomDAO" class="com.xidian.dao.impl.RoomDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="SpecialtyDAO" class="com.xidian.dao.impl.SpecialtyDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="StudentDAO" class="com.xidian.dao.impl.StudentDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="MaintenanceDAO"
+		class="com.xidian.dao.impl.MaintenanceDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CollegeDAO" class="com.xidian.dao.impl.CollegeDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="TeacherDAO" class="com.xidian.dao.impl.TeacherDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CourseDAO" class="com.xidian.dao.impl.CourseDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="SpecialtycourseDAO"
+		class="com.xidian.dao.impl.SpecialtycourseDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+		<bean id="AchievementDAO"
+		class="com.xidian.dao.impl.AchievementDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="studentService" class="com.xidian.service.impl.StudentServiceImpl">
+		<property name="studentDAO"><ref bean="StudentDAO" /></property>
+		<property name="studentclassService"><ref bean="studentclassService" /></property>
+		<property name="achievementDAO"><ref bean="AchievementDAO" /></property>
+	</bean>
+	<bean id="managerService" class="com.xidian.service.impl.ManagerServiceImpl">
+		<property name="managerDAO"><ref bean="ManagerDAO" /></property>
+	</bean>
+	<bean id="roomService" class="com.xidian.service.impl.RoomServiceImpl">
+		<property name="roomDAO"><ref bean="RoomDAO" /></property>
+	</bean>
+	<bean id="buildingService" class="com.xidian.service.impl.BuildingServiceImpl">
+		<property name="buildingDAO"><ref bean="BuildingDAO" /></property>
+	</bean>
+	<bean id="feeService" class="com.xidian.service.impl.FeeServiceImpl">
+		<property name="feeDAO"><ref bean="FeeDAO" /></property>
+	</bean>
+	<bean id="feetypeService" class="com.xidian.service.impl.FeetypeServiceImpl">
+		<property name="feetypeDAO"><ref bean="FeetypeDAO" /></property>
+		<property name="feeDAO"><ref bean="FeeDAO" /></property>
+		<property name="payService"><ref bean="payService" /></property>
+	</bean>
+	<bean id="courseService" class="com.xidian.service.impl.CourseServiceImpl">
+		<property name="courseDAO"><ref bean="CourseDAO" /></property>
+		<property name="teachService"><ref bean="teachService" /></property>
+	</bean>
+	<bean id="teacherService" class="com.xidian.service.impl.TeacherServiceImpl">
+		<property name="teacherDAO"><ref bean="TeacherDAO" /></property>
+	</bean>
+	<bean id="choosingService" class="com.xidian.service.impl.ChoosingServiceImpl">
+		<property name="choosingDAO"><ref bean="ChoosingDAO" /></property>
+		<property name="achievementDAO"><ref bean="AchievementDAO" /></property>
+		<property name="teachService"><ref bean="teachService" /></property>
+	</bean>
+	<bean id="teachService" class="com.xidian.service.impl.TeachServiceImpl">
+		<property name="teachDAO"><ref bean="TeachDAO" /></property>
+		<property name="courseService"><ref bean="courseService" /></property>
+		<property name="teacherService"><ref bean="teacherService" /></property>
+		<property name="specialtycourseService"><ref bean="specialtycourseService" /></property>
+	</bean>
+	<bean id="achievementService" class="com.xidian.service.impl.AchievementServiceImpl">
+		<property name="achievementDAO"><ref bean="AchievementDAO" /></property>
+	</bean>
+	<bean id="roomscoreService" class="com.xidian.service.impl.RoomscoreServiceImpl">
+		<property name="roomscoreDAO"><ref bean="RoomscoreDAO" /></property>
+	</bean>
+	<bean id="maintenanceService" class="com.xidian.service.impl.MaintenanceServiceImpl">
+		<property name="maintenanceDAO"><ref bean="MaintenanceDAO" /></property>
+	</bean>
+	<bean id="applicationService" class="com.xidian.service.impl.ApplicationServiceImpl">
+		<property name="applicationDAO"><ref bean="ApplicationDAO" /></property>
+	</bean>
+	<bean id="payService" class="com.xidian.service.impl.PayServiceImpl">
+		<property name="payDAO"><ref bean="PayDAO" /></property>
+	</bean>
+	<bean id="registerService" class="com.xidian.service.impl.RegisterServiceImpl">
+		<property name="registerDAO"><ref bean="RegisterDAO" /></property>
+	</bean>
+	<bean id="collegeService" class="com.xidian.service.impl.CollegeServiceImpl">
+		<property name="collegeDAO"><ref bean="CollegeDAO" /></property>
+	</bean>
+	<bean id="specialtyService" class="com.xidian.service.impl.SpecialtyServiceImpl">
+		<property name="specialtyDAO"><ref bean="SpecialtyDAO" /></property>
+	</bean>
+	<bean id="specialtycourseService" class="com.xidian.service.impl.SpecialtycourseServiceImpl">
+		<property name="specialtycourseDAO"><ref bean="SpecialtycourseDAO" /></property>
+		<property name="courseService"><ref bean="courseService" /></property>
+	</bean>
+	<bean id="studentclassService" class="com.xidian.service.impl.StudentclassServiceImpl">
+		<property name="studentclassDAO"><ref bean="StudentclassDAO" /></property>
+	</bean>
+	<bean id="noticeService" class="com.xidian.service.impl.NoticeServiceImpl">
+		<property name="noticeDAO"><ref bean="NoticeDAO" /></property>
+	</bean>
+	
+	<bean id="studentAction" class="com.xidian.action.StudentAction">
+		<property name="studentService"><ref bean="studentService" /></property>
+		<property name="collegeService"><ref bean="collegeService" /></property>
+		<property name="specialtyService"><ref bean="specialtyService" /></property>
+		<property name="studentclassService"><ref bean="studentclassService" /></property>
+	</bean>
+	<bean id="roomAction" class="com.xidian.action.RoomAction">
+		<property name="roomService"><ref bean="roomService" /></property>
+		<property name="studentService"><ref bean="studentService" /></property>
+		<property name="buildingService"><ref bean="buildingService" /></property>
+	</bean>
+	<bean id="feeAction" class="com.xidian.action.FeeAction">
+		<property name="feeService"><ref bean="feeService" /></property>
+		<property name="payService"><ref bean="payService" /></property>
+		<property name="feetypeService"><ref bean="feetypeService" /></property>
+	</bean>
+	<bean id="courseAction" class="com.xidian.action.CourseAction">
+		<property name="courseService"><ref bean="courseService" /></property>
+		<property name="teacherService"><ref bean="teacherService" /></property>
+		<property name="teachService"><ref bean="teachService" /></property>
+		<property name="choosingService"><ref bean="choosingService" /></property>
+	</bean>
+	<bean id="choosingAction" class="com.xidian.action.ChoosingAction">
+		<property name="choosingService"><ref bean="choosingService" /></property>
+	</bean>
+	<bean id="achievementAction" class="com.xidian.action.AchievementAction">
+		<property name="achievementService"><ref bean="achievementService" /></property>
+		<property name="specialtycourseService"><ref bean="specialtycourseService" /></property>
+		<property name="studentService"><ref bean="studentService" /></property>
+		<property name="courseService"><ref bean="courseService" /></property>
+		<property name="teacherService"><ref bean="teacherService" /></property>
+		<property name="choosingService"><ref bean="choosingService" /></property>
+	</bean>
+	<bean id="roomscoreAction" class="com.xidian.action.RoomscoreAction">
+		<property name="roomscoreService"><ref bean="roomscoreService" /></property>
+		<property name="studentService"><ref bean="studentService" /></property>
+		<property name="buildingService"><ref bean="buildingService" /></property>
+		<property name="roomService"><ref bean="roomService" /></property>
+	</bean>
+	<bean id="buildingAction" class="com.xidian.action.BuildingAction">
+		<property name="buildingService"><ref bean="buildingService" /></property>
+	</bean>
+	<bean id="maintenanceAction" class="com.xidian.action.MaintenanceAction">
+		<property name="maintenanceService"><ref bean="maintenanceService" /></property>
+		<property name="buildingService"><ref bean="buildingService" /></property>
+		<property name="roomService"><ref bean="roomService" /></property>
+		<property name="studentService"><ref bean="studentService" /></property>
+	</bean>
+	<bean id="applicationAction" class="com.xidian.action.ApplicationAction">
+		<property name="applicationService"><ref bean="applicationService" /></property>
+		<property name="studentService"><ref bean="studentService" /></property>
+	</bean>
+	<bean id="payAction" class="com.xidian.action.PayAction">
+		<property name="payService"><ref bean="payService" /></property>
+		<property name="feetypeService"><ref bean="feetypeService" /></property>
+	</bean>
+	<bean id="registerAction" class="com.xidian.action.RegisterAction">
+		<property name="registerService"><ref bean="registerService" /></property>
+	</bean>
+	<bean id="collegeAction" class="com.xidian.action.CollegeAction">
+		<property name="collegeService"><ref bean="collegeService" /></property>
+	</bean>
+	<bean id="specialtyAction" class="com.xidian.action.SpecialtyAction">
+		<property name="specialtyService"><ref bean="specialtyService" /></property>
+		<property name="collegeService"><ref bean="collegeService" /></property>
+	</bean>
+	<bean id="specialtycourseAction" class="com.xidian.action.SpecialtycourseAction">
+		<property name="specialtycourseService"><ref bean="specialtycourseService" /></property>
+		<property name="specialtyService"><ref bean="specialtyService" /></property>
+		<property name="teachService"><ref bean="teachService" /></property>
+		<property name="courseService"><ref bean="courseService" /></property>
+		<property name="teacherService"><ref bean="teacherService" /></property>
+	</bean>
+	<bean id="studentclassAction" class="com.xidian.action.StudentclassAction">
+		<property name="specialtyService"><ref bean="specialtyService" /></property>
+		<property name="studentclassService"><ref bean="studentclassService" /></property>
+	</bean>
+	<bean id="noticeAction" class="com.xidian.action.NoticeAction">
+		<property name="noticeService"><ref bean="noticeService" /></property>
+	</bean>
+	<bean id="teachAction" class="com.xidian.action.TeachAction">
+		<property name="teachService"><ref bean="teachService" /></property>
+		<property name="specialtyService"><ref bean="specialtyService" /></property>
+		<property name="courseService"><ref bean="courseService" /></property>
+		<property name="teacherService"><ref bean="teacherService" /></property>
+	</bean>
+	<bean id="teacherAction" class="com.xidian.action.TeacherAction">
+		<property name="teacherService"><ref bean="teacherService" /></property>
+	</bean>
+	<bean id="feetypeAction" class="com.xidian.action.FeetypeAction">
+		<property name="feeService"><ref bean="feeService" /></property>
+		<property name="feetypeService"><ref bean="feetypeService" /></property>
+		<property name="collegeService"><ref bean="collegeService" /></property>
+		<property name="specialtyService"><ref bean="specialtyService" /></property>
+		<property name="studentclassService"><ref bean="studentclassService" /></property>
+	</bean>
+</beans>

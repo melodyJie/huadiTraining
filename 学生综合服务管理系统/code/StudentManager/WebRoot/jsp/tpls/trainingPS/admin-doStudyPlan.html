@@ -1,0 +1,72 @@
+<form action="">
+    <ul class="searchFUl clearfloat">
+        <li>
+            <label>学院:</label>
+            <select id="xueyuan1" class="selectInput" name="fi-xueyuan">
+                <option value="">请选择</option>
+            </select>
+        </li>
+        <li>
+            <label>专业:</label>
+            <select class="selectInput" name="fi-zhuanye" id="zhuanye1">
+                <option value="">请选择</option>
+            </select>
+        </li>
+        <li>
+            <label>学期:</label>
+            <select class="selectInput" name="fi-xueqi" id="term">
+                <option value="1">学期001</option>
+                <option value="2">学期002</option>
+                <option value="3">学期003</option>
+                <option value="4">学期004</option>
+                <option value="5">学期005</option>
+                <option value="6">学期006</option>
+                <option value="7">学期007</option>
+                <option value="8">学期008</option>
+            </select>
+        </li>
+        <li>
+            <input id="searchBtn" class="fsBtn" type="submit" />
+        </li>
+    </ul>
+</form>
+<div class="titleArea">
+    <span class="titleP">已选课程</span>
+    <div class="btnBox">
+        <label class="addCourseLabel">添加课程:</label>
+        <select class="selectInput addCourseSelect" name="fi-xueyuan" id="course">
+            <option value="">请选择</option>
+        </select>
+        <label class="addCourseLabel">选择教师:</label>
+        <select class="selectInput addCourseSelect" name="fi-xueyuan" id="teacher">
+            <option value="">请选择</option>
+        </select>
+        <input id="toAddCourseBtn" class="formBtn" type="submit" value="添加课程">
+    </div>
+</div>
+<div class="viewArea">
+    <table class="table table-hover table-striped table-bordered">
+        <thead>
+            <tr>
+                <td>课程id</td>
+                <td>课程名称</td>
+                <td>课程类型</td>
+                <td>学分</td>
+                <td>授课老师</td>
+                <td>操作</td>
+            </tr>
+        </thead>
+        <tbody class="doStudyPlanTbody">
+            <!-- <tr ng-repeat="coursePlan in coursePlans">
+                <td name="courseId" data-id={{coursePlan.teacherNumber}}>{{ coursePlan.courseId }}</td>
+                <td name="courseName">{{ coursePlan.courseName}}</td>
+                <td name="courseType">{{coursePlan.courseType}}</td>
+                <td name="courseCredit">{{ coursePlan.credit }}</td>
+                <td name="courseTeacher">{{ coursePlan.teacherName }}</td>
+                <td name="caozuo">
+                	<input class="delCourseBtn" type="button" value="删除" />
+                </td>
+            </tr> -->
+        </tbody>
+    </table>
+</div>

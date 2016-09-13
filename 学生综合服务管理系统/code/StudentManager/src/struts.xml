@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.devMode" value="false" />
+	<package name="***" extends="json-default" namespace="/">
+		<action name="index" class="com.xidian.action.IndexAction">
+			<result name="index">/jsp/login.jsp</result>
+		</action>
+		
+		<action name="login_*" class="com.xidian.action.LoginAction" method="{1}">
+			<result name="student">/jsp/systemSelect-student.jsp</result>
+			<result name="manager">/jsp/systemSelect-admin.jsp</result>
+			<result name="teacher">/jsp/teacher.jsp</result>
+			<result name="error">/jsp/login.jsp</result>
+			<result name="input">/jsp/login.jsp</result>
+		</action>
+		
+		<action name="achievement_*" class="com.xidian.action.AchievementAction" method="{1}">
+		</action>
+		
+		<action name="application_*" class="com.xidian.action.ApplicationAction" method="{1}">
+		</action>
+		
+		<action name="building_*" class="com.xidian.action.BuildingAction" method="{1}">
+		</action>
+		
+		<action name="course_*" class="com.xidian.action.CourseAction" method="{1}">
+		</action>
+		
+		<action name="college_*" class="com.xidian.action.CollegeAction" method="{1}">
+		</action>
+		
+		<action name="choosing_*" class="com.xidian.action.ChoosingAction" method="{1}">
+		</action>
+		
+		<action name="fee_*" class="com.xidian.action.FeeAction" method="{1}">
+		</action>
+		
+		<action name="feetype_*" class="com.xidian.action.FeetypeAction" method="{1}">
+		</action>
+		
+		<action name="manager_*" class="com.xidian.action.ManagerAction" method="{1}">
+			<result name="system">/jsp/systemSelect-admin.jsp</result>
+		</action>
+		
+		<action name="maintenance_*" class="com.xidian.action.MaintenanceAction" method="{1}">
+		</action>
+		
+		<action name="notice_*" class="com.xidian.action.NoticeAction" method="{1}">
+		</action>
+		
+		<action name="pay_*" class="com.xidian.action.PayAction" method="{1}">
+		</action>
+		
+		<action name="room_*" class="com.xidian.action.RoomAction" method="{1}">
+		</action>
+		
+		<action name="roomscore_*" class="com.xidian.action.RoomscoreAction" method="{1}">
+		</action>
+		
+		<action name="register_*" class="com.xidian.action.RegisterAction" method="{1}">
+		</action>
+		
+		<action name="student_*" class="com.xidian.action.StudentAction" method="{1}">
+			<result name="system">/jsp/systemSelect-student.jsp</result>
+		</action>
+		
+		<action name="specialty_*" class="com.xidian.action.SpecialtyAction" method="{1}">
+		</action>
+		
+		<action name="specialtycourse_*" class="com.xidian.action.SpecialtycourseAction" method="{1}">
+		</action>
+		
+		<action name="studentclass_*" class="com.xidian.action.StudentclassAction" method="{1}">
+		</action>
+		
+		<action name="teach_*" class="com.xidian.action.TeachAction" method="{1}">
+		</action>
+		
+		<action name="teacher_*" class="com.xidian.action.TeacherAction" method="{1}">
+		</action>
+	</package>
+</struts>    

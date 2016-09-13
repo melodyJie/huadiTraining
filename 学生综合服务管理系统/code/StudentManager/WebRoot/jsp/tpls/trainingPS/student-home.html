@@ -1,0 +1,19 @@
+<div class="marginBox30">
+	<table class="table table-hover table-striped table-bordered">
+        <div class="titleArea"><span class="titleP">个人信息</span></div>
+        <!-- <thead>
+            <tr>
+                <td>费用类型</td>
+                <td>已缴费金额</td>
+                <td>欠费金额</td>
+                <td>上次缴费时间</td>
+            </tr>
+        </thead> -->
+        <tbody>
+            <tr ng-repeat="data in perInfors">
+                <td>{{ data.type }}</td>
+                <td>{{ data.value }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

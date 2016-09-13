@@ -1,0 +1,327 @@
+/* 标题 */
+
+.titleArea {
+	position:relative;
+    background: linear-gradient(to bottom, #333, #666);
+    height: 40px;
+}
+
+.titleArea>.titleP {
+    display: inline-block;
+    margin-left: 50px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+    color: white;
+}
+
+
+/* 通用 */
+
+.btnBox {
+    display: inline-block;
+    position: absolute;
+    height: 40px;
+    right: 20px;
+    top:0;
+}
+
+.formBtn {
+    width: 80px;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 2px;
+    outline: none;
+}
+
+.bigRadio {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+
+/* 公告 */
+textarea{
+    height: 100%;
+}
+.noticeArea {
+    border: 1px solid #999;
+    background-color: #F8F8FF;
+    overflow-y: auto;
+    height: 500px;
+}
+.noticeArea textarea{
+    overflow-y: auto;
+}
+
+.noticeArea p {
+    text-indent: 2em;
+    padding: 10px 0px;
+    margin: 0 20px;
+    border-bottom: 2px solid #B0C4DE;
+}
+
+.noticeArea>#notice>ul {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.noticeArea>#notice>ul>li {
+    margin-left: 2em;
+    padding: 6px;
+}
+
+.noticeArea>#notice>ul>li>ul {
+    font-size: 16px;
+}
+
+.noticeArea>#notice>ul>li>ul>li {
+    margin-left: 2em;
+    padding: 4px;
+}
+
+
+/* 搜索区域 */
+
+.inputBox {
+    margin: 10px 0 20px 0;
+}
+
+.sousuoArea {
+    float: right;
+}
+
+.sousuoInput {}
+
+
+/* formInputSelect */
+
+.formUl {
+    margin: 20px 0 0 50px;
+}
+
+.formUl>li {
+    padding: 6px 0;
+}
+
+.formUl label {
+    display: inline-block;
+    width: 100px;
+    font-size: 18px;
+    color: #8c7e7e;
+    vertical-align: top;
+}
+
+.formUl select {
+    padding: 0 10px;
+    width: 120px;
+}
+.formUl ul.li_ul{
+    display: inline-block;
+}
+.formUl ul.li_ul>li{
+    border: 1px solid #ddd;   
+}
+.formUl ul.li_ul>li>p{
+    display: inline-block;
+    padding: 8px 10px; 
+    border: 1px solid #ddd;
+}
+.formUl ul.li_ul>li:hover{
+    background-color: #f5f5f5;
+}
+.formUl ul.li_ul>li>p>span{
+    font-weight: bold;
+}
+.formUl ul.li_ul>li{
+
+}
+.formUl .textInput {
+    min-width: 200px;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.formUl .selectInput {
+    min-width: 100px;
+}
+
+.formUl .textInput,
+.selectInput {
+    height: 30px;
+    font-size: 16px;
+    line-height: 1;
+    color: #777;
+    background: #FCFCFC;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .05);
+    -webkit-transition: color .2s linear, border-color .3s linear;
+    outline: none;
+}
+
+.formUl .textInput:focus,
+.selectInput:focus {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    background: #FFF;
+    color: #444;
+}
+
+.formUl .dateInput {
+    min-width: 160px;
+}
+
+.formUl .areaInput {
+    min-width: 375px;
+    min-height: 90px;
+    line-height: 1.5;
+    font-size: 16px;
+    padding: 5px 10px;
+    color: #777;
+    background: #FCFCFC;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    width: 250px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .05);
+    -webkit-transition: color .2s linear, border-color .3s linear;
+    overflow: auto;
+    resize: none;
+    outline: none;
+}
+
+.formUl .textInput:focus,
+.formUl .areaInput:focus {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    background: #FFF;
+    color: #444;
+}
+/* searchF 区域 */
+.searchFUl{
+    margin-bottom: 10px;
+}
+.searchFUl>li{
+    float: left;
+    margin-right: 15px;
+}
+.searchFUl .textInput,.searchFUl .dateInput{
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 1;
+    color: #777;
+    background: #FCFCFC;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .05);
+    -webkit-transition: color .2s linear, border-color .3s linear;
+    outline: none;
+}
+.searchFUl .textInput:focus,.searchFUl .dateInput:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    background: #FFF;
+    color: #444;
+}
+
+
+    /* searchF submit btn 按钮 */
+
+.searchFBtn{
+    width: 60px;
+    height: 30px;
+}
+
+/* delStudent */
+
+ul.selectStu {
+    margin: 0 0 15px 0;
+}
+
+ul.selectStu>li {
+    float: left;
+    margin-right: 15px;
+}
+
+ul.selectStu>li>select {
+    width: 120px;
+}
+
+
+/* modStudent */
+
+.viewArea {
+    position: relative;
+    min-height: 500px;
+    width: 100%;
+}
+
+
+/* modInfor */
+
+.modInfor {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+}
+
+
+.areaBox1 {
+    position: relative;
+    padding: 10px 8px 0 8px;
+    width: 100%;
+    height: 100%;
+}
+
+.titleArea2 {
+    position: relative;
+    background: linear-gradient(to bottom, #333, #666);
+    height: 35px;
+}
+
+.titleArea2 .titleP {
+    display: inline-block;
+    margin-left: 80px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px;
+    color: white;
+}
+.titleArea2 .titleSpan{
+    padding-right:15px; 
+}
+
+.areaBox1 .table>tbody>tr>td {
+    padding: 5px;
+}
+
+.btnBox2 {
+    display: inline-block;
+    position: absolute;
+    height: 35px;
+    right: 20px;
+    top: 0;
+}
+
+.box2Btn{
+    width: 60px;
+    height: 25px;
+    margin-top: 5px;
+    border-radius: 2px;
+    outline: none;
+}
+.viewArea1{
+    position: relative;
+    min-height: 440px
+}
+nav.paging{
+    position: absolute;
+    bottom: -40px;
+    right: 20px;
+}
+nav.paging>ul>li>a{
+    cursor: pointer;
+}

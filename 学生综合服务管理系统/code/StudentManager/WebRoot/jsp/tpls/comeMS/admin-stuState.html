@@ -1,0 +1,73 @@
+<form action="">
+    <ul class="selectStu clearfloat" id="head">
+    	<li>
+            <label>年级</label>
+            <select class="nianji selectInput" name="fi-nianji" id="nianji1">
+                <option value="1">大一</option>
+                <option value="2">大二</option>
+                <option value="3">大三</option>
+                <option value="4">大四</option>
+            </select>
+        </li>
+        <li>
+            <label>学院:</label>
+            <select class="xueyuan selectInput" name="fi-xueyuan" id="xueyuan1">
+                <option value="">请选择</option>
+            </select>
+        </li>
+        <li>
+            <label>专业:</label>
+            <select class="zhuanye selectInput" name="fi-zhuanye" id="zhuanye1">
+                <option value="">请选择</option>
+            </select>
+        </li>
+        <li>
+            <label>班级:</label>
+            <select class="banji selectInput" name="fi-banji" id="banji1">
+                <option value="">请选择</option>
+            </select>
+        </li>
+    </ul>
+</form>
+<div class="viewArea">
+    <div class="titleArea clearfloat">
+        <span class="titleP">学生信息</span>
+        <!-- <div class="btnBox">
+        <input id="modBtn" class="formBtn" type="submit" value="修改">
+        <input id="delBtn" class="formBtn" type="submit" value="删除">
+    </div> -->
+    </div>
+    <div class="viewArea1">
+        <table class="table table-hover table-striped table-bordered">
+            <thead>
+                <tr>
+                    <td>学生id</td>
+                    <td>学号</td>
+                    <td>姓名</td>
+                    <td>身份证</td>
+                    <td>密码</td>
+                </tr>
+            </thead>
+            <tbody class="stuInforTbody">
+                <tr>
+                    <td name="stuId">iad</td>
+                    <td name="stuNum">学号</td>
+                    <td name="stuName">姓名</td>
+                    <td name="stuIDCard">身份证</td>
+                    <td name="password">密码</td>
+                </tr>
+            </tbody>
+        </table>
+        <nav class="paging">
+            <ul class="pagination">
+                <li><a>&laquo;</a></li>
+                <li><a>1</a></li>
+                <li><a>2</a></li>
+                <li><a>3</a></li>
+                <li><a>4</a></li>
+                <li><a>5</a></li>
+                <li><a>&raquo;</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

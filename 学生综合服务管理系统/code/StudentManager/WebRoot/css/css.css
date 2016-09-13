@@ -1,0 +1,41 @@
+/*简单的重置*/
+*{
+	margin:0;
+	padding:0;
+}
+ul{
+	list-style-type:none;
+}
+body {
+    font-family: Arial,"Microsoft YaHei",sans-serif;
+}
+/*通用样式*/
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+}
+.hidden{
+	display:none;
+}
+a{
+	text-decoration: none;
+	color:inherit;
+}
+.wrap{
+	width:1024px;
+	margin:0 auto;
+}
+.pr{
+	position:relative;
+}
+.pa{
+	position:absolute;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}

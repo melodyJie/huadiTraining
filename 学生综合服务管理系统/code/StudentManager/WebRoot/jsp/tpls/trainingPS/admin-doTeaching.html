@@ -1,0 +1,54 @@
+<div class="titleArea">
+    <span class="titleP">教师授课管理</span>
+    <!-- <div class="btnBox" id="btnBox1">
+        <input type="text" class="selectInput" style="margin-top:5px;width:150px;"  id="searchInput" />
+        <input id="toSearchingBtn" class="formBtn" type="button" value="搜索" />
+    </div> -->
+</div>
+<div class="viewArea">
+    <div class="viewArea1">
+        <table class="table table-hover table-striped table-bordered">
+            <thead>
+                <tr>
+                    <td>教师id</td>
+                    <td>教师名</td>
+                    <td>教授课程</td>
+                    <td>操作</td>
+                </tr>
+            </thead>
+            <tbody class="doTeachingTbody">
+            </tbody>
+        </table>
+        <nav class="paging">
+            <ul class="pagination">
+                <li><a>&laquo;</a></li>
+                <li><a>1</a></li>
+                <li><a>2</a></li>
+                <li><a>3</a></li>
+                <li><a>4</a></li>
+                <li><a>5</a></li>
+                <li><a>&raquo;</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="modInfor">
+        <div class="btnBox clearfloat">
+            <input id="returnBtn" class="btnform" type="button" value="返回" />
+            <input id="subTeachingBtn"  class="btnform" type="button" value="提交">
+        </div>
+        <form class="modTeachingF clearfloat" action="" method="get">
+            <h3 name="teacherName"></h3>
+            <p class="courseNameP"></p>
+            <div id="course_list">
+                <ul id="ul_title">
+                    <li class="active" name="toCompulsory">必修课程</li>
+                    <li name="toElective">选修课程</li>
+                </ul>
+                <div class="courseDiv" name="Compulsory">
+                </div>
+                <div name="Elective" class="courseDiv">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="viewArea">
+    <div class="mainView">
+        <div class="titleArea clearfloat">
+            <span class="titleP">添加缴费项</span>
+        </div>
+        <form action="">
+            <ul class="formUl" >
+                <li>
+                    <label for="">缴费项名称:</label>
+                    <input class="textInput" type="text" name="fi-costName" id="costNameInput" />
+                    <span class="error" name="costNameError" style="color:red;"></span>
+                </li>
+                <li>
+                    <label for="">划分类型:</label>
+                    <select class="selectInput" name="fi-costType" id="costTypeSelect">
+                        <option value="1">按年级</option>
+                        <option value="2">按学院</option>
+                        <option value="3">按专业</option>
+                        <option value="4">按班级</option>
+                        <option value="5">按学院+年级</option>
+                        <option value="6">按专业+年级</option>
+                    </select>
+                </li>
+                <li>
+                    <input type="submit" value="添加" id="addCostSubmit">
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>StudentManager</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+    <filter-name>struts2</filter-name>
+    <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>struts2</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>encodeFilter</filter-name>
+    <filter-class>com.xidian.util.EncodeFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>encodeFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+ 
+<filter>
+ <filter-name>SessionFilter</filter-name>
+ <filter-class>com.xidian.util.SessionFilter</filter-class>
+ <init-param>
+     <description>将当前登录的用户的信息保存在 session 中时使用的key，如果没有配置此参数，则该过滤器不起作用</description>
+     <param-name>sessionKey</param-name>
+     <param-value>user</param-value>
+ </init-param>
+ <init-param>
+     <description>
+         	如果用户未登录（即在 session 中 key 为 sessionKey 的属性不存在或为空），则将请求重定向到该 url。
+        	该 url 不包含web应用的 ContextPath。
+      		如果不配置此参数，则在用户未登录系统的情况下，直接重定向到web应用的根路径（/）
+     </description>
+     <param-name>redirectUrl</param-name>
+     <param-value>/index.jsp</param-value>
+ </init-param>
+</filter>
+<filter-mapping>
+ <filter-name>SessionFilter</filter-name>
+ <url-pattern>/*</url-pattern>
+</filter-mapping>
+
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:applicationContext.xml</param-value>
+  </context-param>
+</web-app>

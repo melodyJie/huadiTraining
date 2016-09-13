@@ -1,0 +1,28 @@
+<div class="marginBox30">
+    <table class="table table-hover table-striped table-bordered">
+        <div class="titleArea">
+            <span class="titleP">交费</span>
+            <div class="btnBox">
+                <input id="pay" class="formBtn" type="submit" value="交费">
+            </div>
+        </div>
+        <thead>
+            <tr>
+        		<td></td>
+            	<td>费用类型</td>
+            	<td>金额</td>
+        	</tr>
+        </thead>
+        <tbody>
+            <form>
+                <tr ng-repeat="topic in expenses">
+        			<td>
+                		<input class="bigRadio" type="radio" name="stay" />
+           			</td>
+            		<td data-id={{topic.feetypeId}}>{{ topic.fee.feeName }}</td>
+            		<td>${{ topic.value }}</td>
+        		</tr>
+            </form>
+        </tbody>
+    </table>
+</div>

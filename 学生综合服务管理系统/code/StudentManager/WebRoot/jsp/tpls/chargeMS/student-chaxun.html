@@ -1,0 +1,27 @@
+<div>
+    <div class="inputBox clearfloat">
+        <div class="sousuoArea">
+            <label for="sousuo">搜索:</label>
+            <input class="sousuoInput" type="text" name="sousuo" ng-model="sousuo">
+        </div>
+    </div>
+    <table class="table table-hover table-striped table-bordered">
+        <div class="titleArea"><span class="titleP">缴费查询</span></div>
+        <thead>
+            <tr>
+                <td>费用类型</td>
+                <td>需缴费用</td>
+                <td>实际缴费</td>
+                <td>缴费时间</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="topic in topics | filter:sousuo">
+                <td>{{ topic.feetype.fee.feeName }}</td>
+                <td>${{ topic.feetype.value }}</td>
+                <td>${{ topic.value }}</td>
+                <td>{{ topic.payDate }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,112 @@
+<form action="">
+    <ul class="selectStu clearfloat" id="head">
+        <li>
+            <label>年级</label>
+            <select class="nianji selectInput" name="fi-nianji" id="nianji1">
+                <option value="1">大一</option>
+                <option value="2">大二</option>
+                <option value="3">大三</option>
+                <option value="4">大四</option>
+            </select>
+        </li>
+        <li>
+            <label>学院:</label>
+            <select class="xueyuan selectInput" name="fi-xueyuan" id="xueyuan1">
+                <option value="">请选择</option>
+            </select>
+        </li>
+        <li>
+            <label>专业:</label>
+            <select class="zhuanye selectInput" name="fi-zhuanye" id="zhuanye1">
+                <option value="">请选择</option>
+            </select>
+        </li>
+        <li>
+            <label>班级:</label>
+            <select class="banji selectInput" name="fi-banji" id="banji1">
+                <option value="">请选择</option>
+            </select>
+        </li>
+    </ul>
+</form>
+<div class="titleArea clearfloat">
+    <span class="titleP">修改学生信息</span>
+    <div class="btnBox">
+        <input id="modBtn" class="formBtn" type="submit" value="修改">
+        <input id="delBtn" class="formBtn" type="submit" value="删除">
+    </div>
+</div>
+<div class="viewArea">
+    <div class="viewArea1">
+        <table class="table table-hover table-striped table-bordered">
+            <thead>
+                <tr>
+                    <td></td>
+                    <td>学生id</td>
+                    <td>姓名</td>
+                    <td>性别</td>
+                    <td>身份证</td>
+                    <td>学院</td>
+                    <td>专业</td>
+                    <td>班级</td>
+                </tr>
+            </thead>
+            <tbody class="doStudentTbody">
+            </tbody>
+        </table>
+        <nav class="paging">
+            <ul class="pagination">
+                <li><a>&laquo;</a></li>
+                <li><a>1</a></li>
+                <li><a>2</a></li>
+                <li><a>3</a></li>
+                <li><a>4</a></li>
+                <li><a>5</a></li>
+                <li><a>&raquo;</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="modInfor">
+        <form id="addStudentF" action="">
+            <ul class="formUl">
+                <li>
+                    <label>姓名:</label>
+                    <input class="textInput" type="text" name="fi-name" id="name" />
+                </li>
+                <li>
+                    <label for="">性别:</label>
+                    <select class="selectInput" name="fi-sex" id="sex">
+                        <option value="1">男</option>
+                        <option value="0">女</option>
+                    </select>
+                </li>
+                <li>
+                    <label>身份证:</label>
+                    <input class="textInput" type="text" name="fi-idcard" id="identity" />
+                </li>
+                <li>
+                    <label>学院:</label>
+                    <select class="xueyuan selectInput" name="fi-xueyuan" id="xueyuan2">
+                        <option value="">请选择</option>
+                    </select>
+                </li>
+                <li>
+                    <label>专业:</label>
+                    <select class="zhuanye selectInput" name="fi-zhuanye" id="zhuanye2">
+                        <option value="">请选择</option>
+                    </select>
+                </li>
+                <li>
+                    <label>班级:</label>
+                    <select class="banji selectInput" name="fi-banji" id="banji2">
+                        <option value="">请选择</option>
+                    </select>
+                </li>
+                <li>
+                    <input id="returnBtn" class="fsBtn" type="button" value="返回">
+                    <input id="submitUpdate" class="fsBtn" type="submit" />
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>

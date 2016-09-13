@@ -1,0 +1,35 @@
+<div class="marginBox30">
+    <table class="table table-hover table-striped table-bordered">
+        <div class="titleArea">
+            <span class="titleP">退课</span>
+            <div class="btnBox">
+                <input id="cancel" class="formBtn" type="submit" value="退课">    
+            </div>
+            
+        </div>
+        <thead>
+            <tr>
+                <td></td>
+                <td>课程id</td>
+				<td>课程名</td>
+				<td>课程类型</td>
+				<td>学分</td>
+				<td>教师</td>
+            </tr>
+        </thead>
+        <tbody>
+            <form>
+                <tr ng-repeat="course in courses | filter:sousuo">
+                    <td data-id={{course.choosingId}}>
+                        <input class="bigRadio" type="radio" name="course" />
+                    </td>
+                    <td>{{ course.teach.course.courseId }}</td>
+                    <td>{{ course.teach.course.courseName }}</td>
+                    <td>{{ course.teach.course.courseType }}</td>
+                    <td>{{ course.teach.course.credit }}</td>
+                    <td>{{ course.teach.teacher.teacherName }}</td>
+                </tr>
+            </form>
+        </tbody>
+    </table>
+</div>

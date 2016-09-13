@@ -1,0 +1,33 @@
+/* 系统私有样式 */
+.roomSelect{
+
+}
+.roomBox{
+	position: relative;
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin: 18px;
+	border-radius: 50px;
+	background-color: #FAFAD2;
+	cursor: pointer;
+}
+.roomBox.onclick{
+	border: 2px solid #808000;
+}
+.roomBox p{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 60px;
+    text-align: center;
+}
+.roomBox span{
+	display: block;
+	font-size: 12px;
+}
+.error{
+	color: red;
+}
+

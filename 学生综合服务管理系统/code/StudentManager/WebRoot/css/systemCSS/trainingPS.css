@@ -1,0 +1,91 @@
+.addCourseLabel {
+    height: 40px;
+    line-height: 40px;
+    color: white;
+}
+
+.addCourseSelect {
+    margin-top: 5px;
+    width: 120px;
+}
+/* addCourse */
+span.error{
+	color: red;
+}
+
+/* doTeaching */
+.modInfor .btnBox{
+	float: right;
+	height: 40px;
+	margin-top: -35px;
+}
+.modInfor .btnBox .btnform{
+	width: 50px;
+	height: 30px;
+}
+.modTeachingF {
+    margin-left: 5px;
+}
+.modTeachingF h3[name="teacherName"]{
+	display: inline-block
+}
+.courseNameP{
+	display: inline-block;
+	width: 450px;
+	word-break:break-all;
+}
+.modTeachingF .courseNameP>span{
+	padding: 0 8px;
+	font-size: 14px;
+}
+.modTeachingF #course_list {
+    margin-top: -30px;
+}
+
+.modTeachingF .courseDiv>label {
+    float: left;
+    padding: 10px;
+    line-height: 20px;
+    min-width: 200px;
+}
+
+.modTeachingF .courseDiv>label>input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.modTeachingF #ul_title {
+    float: right;
+}
+
+.modTeachingF #ul_title li {
+    display: inline-block;
+    height: 32px;
+    padding: 0 10px;
+    line-height: 30px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #999;
+    border-bottom: none;
+    box-sizing: border-box;
+    margin-right: 15px;
+    margin-bottom: -2px;
+    cursor: pointer;
+}
+
+.modTeachingF #ul_title li.active {
+    border: 2px solid #8B4513;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.modTeachingF div[name="Elective"]{
+    display: none;
+}
+
+.modTeachingF div.courseDiv {
+    width: 100%;
+    height: 450px;
+    /* padding: 15px; */
+    overflow-y: auto;
+    border: 1px solid #7396B8;
+}

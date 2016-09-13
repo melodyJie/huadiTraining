@@ -1,0 +1,58 @@
+<div class="titleArea">
+    <span class="titleP">添加学生</span>
+    <div class="btnBox">
+        <input id="addStudent" class="formBtn" type="submit" value="确定">
+    </div>
+</div>
+<form id="addStudentF" action="">
+    <ul class="formUl">
+        <li>
+            <label for="">姓名:</label>
+            <input id="name" class="textInput" type="text" />
+            <span class="error" name="nameError"></span>
+        </li>
+        <li>
+            <label for="">性别:</label>
+            <select class="selectInput" name="" id="sex">
+            	<option value="1" >男</option>
+            	<option value="0">女</option>
+            </select>
+        </li>
+        <li>
+            <label for="">身份证:</label>
+            <input id="identity" class="textInput" type="text" />
+            <span class="error" name="identityError"></span>
+        </li>
+        <li>
+            <label for="">入学年份:</label>
+            <select class="nianji selectInput" id="nianjiselect">
+                <option value="1">2016</option>
+                <option value="2">2015</option>
+                <option value="3">2014</option>
+                <option value="4">2013</option>
+            </select>
+        </li>
+        <li>
+            <label for="">学院:</label>
+            <select class="xueyuan selectInput" name="" id="college">
+            	<option value="">请选择</option>
+            </select>
+            <span class="error" name="collegeError"></span>
+        </li>
+        <li>
+            <label for="">专业:</label>
+            <select class="zhuanye selectInput" name="" id="specialty">
+            	<option value="">请选择</option>
+            </select>
+            <span class="error" name="specialtyError"></span>
+        </li>
+        <li>
+            <label for="">班级:</label>
+            <select class="banji selectInput" name="" id="class">
+            	<option value="">请选择</option>
+            </select>
+            <span class="error" name="classError"></span>
+        </li>
+        
+    </ul>
+</form>
